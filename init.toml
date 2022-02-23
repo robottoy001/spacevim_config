@@ -1,0 +1,180 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2022 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "gruvbox"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "nil"
+    statusline_iseparator = "bar"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+
+    # custom settings
+    relativenumber=false
+    autocomplete_method="coc"
+    enable_vimfiler_welcome = false
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after = "myspacevim#after"
+    # indent-blankline.nvim 会在一些奇怪的位置（比如 filetree 中）放置竖线
+    disabled_plugins = ["indent-blankline.nvim","octo.nvim"]
+
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+# 计算器, 日历, 书签等小工具
+[[layers]]
+  name = 'tools'
+
+# 禁用 SpaceVim 的 checkers layer, 让 coc.nvim 来管理
+[[layers]]
+  name = "checkers"
+  enable = false
+
+# 版本控制
+[[layers]]
+  name = "VersionControl"
+  enable-gtm-status = true
+
+[[layers]]
+  name = "git"
+  git-plugin = "fugitive"
+
+[[layers]]
+  name = "fzf"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#latex"
+
+[[layers]]
+  name = "lang#go"
+
+
+# ----------------- 添加的插件 -------------------------------------------------
+# coc.nvim 核心配置，不要删除
+[[custom_plugins]]
+  name = 'neoclide/coc.nvim'
+  merge = 0
+  rev = 'release'
+
+# 快速编辑 markdown 的表格
+[[custom_plugins]]
+  name = 'dhruvasagar/vim-table-mode'
+
+# 更加美观的 tagbar 
+[[custom_plugins]]
+    name = 'liuchengxu/vista.vim'
+
+# 更加方便的调节窗口的大小
+[[custom_plugins]]
+    name = 'simeji/winresizer'
+
+# 为 c/cpp 提供基于 lsp 的高亮
+[[custom_plugins]]
+    name = 'jackguo380/vim-lsp-cxx-highlight'
+
+# 从 http://cplusplus.com/ 和 http://cppreference.com/ 获取文档
+[[custom_plugins]]
+    name = 'skywind3000/vim-cppman'
+
+# 利用 git blame 显示当前行的 commit message
+[[custom_plugins]]
+    name = 'rhysd/git-messenger.vim'
+    lazy =  1
+    on_cmd = 'GitMessenger'
+
+# 以悬浮窗口的形式打开终端
+[[custom_plugins]]
+    name = 'voldikss/vim-floaterm'
+
+# 显示搜索的标号
+[[custom_plugins]]
+    name = 'google/vim-searchindex.git'
+
+# 安装公共的的 snippets
+[[custom_plugins]]
+    name = 'honza/vim-snippets'
+
+# 很多 lua 插件依赖的库
+[[custom_plugins]]
+    name = 'nvim-lua/plenary.nvim'
+
+# 安装 telescope 来实现搜索
+[[custom_plugins]]
+    name = 'nvim-telescope/telescope.nvim'
+
+# 使用 telescope 来搜索 coc 提供的符号
+[[custom_plugins]]
+    name = 'fannheyward/telescope-coc.nvim'
+
+# telescope 搜索的插件，可以提升搜索效率
+[[custom_plugins]]
+  name = 'nvim-telescope/telescope-fzf-native.nvim'
+  build = 'make'
+
+# neovim 0.5 的关键新特性，实现更好的高亮
+[[custom_plugins]]
+  name = 'nvim-treesitter/nvim-treesitter'
+
+# 虽然 spacevim 内置了 filetree，但是这一个是最好用的
+[[custom_plugins]]
+  name = 'kyazdani42/nvim-tree.lua'
+
+# 用于文件树等插件的图标
+[[custom_plugins]]
+  name = 'kyazdani42/nvim-web-devicons'
+
+# 在 neovim 中使用 github cli
+[[custom_plugins]]
+  name = 'pwntester/octo.nvim'
+
+# ----------------- 一些并不关键的插件 -------------------------------------------------
+# 配合 sourcetrail 使用
+[[custom_plugins]]
+  name = 'CoatiSoftware/vim-sourcetrail'
+
+# 一个记忆卡片插件
+[[custom_plugins]]
+  name = 'Martins3/refresh.nvim'
+
+# 日程管理
+[[custom_plugins]]
+  name = 'nvim-orgmode/orgmode'
+
+# 在 nvim 中构成提示窗
+[[custom_plugins]]
+  name = 'rcarriga/nvim-notify'
+
+# 用于统计代码时间
+#[[custom_plugins]]
+#  name = 'wakatime/vim-wakatime'
+
+# vim 上的图形库
+[[custom_plugins]]
+  name = 'MunifTanjim/nui.nvim'
