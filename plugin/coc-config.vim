@@ -68,6 +68,7 @@ let s:coc_extensions = [
       \ 'coc-xml',
       \ 'coc-ccls',
       \ 'coc-tsserver',
+      \ 'coc-java',
 			\]
 
 " coc-vimtex
