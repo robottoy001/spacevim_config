@@ -130,6 +130,7 @@ default_height = 30
 # 安装 telescope 来实现搜索
 [[custom_plugins]]
     name = 'nvim-telescope/telescope.nvim'
+    rev = 'nvim-0.6'
 
 # 使用 telescope 来搜索 coc 提供的符号
 [[custom_plugins]]
