@@ -153,8 +153,8 @@ default_height = 30
   name = 'kyazdani42/nvim-web-devicons'
 
 # 在 neovim 中使用 github cli
-[[custom_plugins]]
-  name = 'pwntester/octo.nvim'
+#[[custom_plugins]]
+#  name = 'pwntester/octo.nvim'
 
 # ----------------- 一些并不关键的插件 -------------------------------------------------
 # 配合 sourcetrail 使用
