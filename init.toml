@@ -82,6 +82,7 @@ default_height = 30
   name = 'neoclide/coc.nvim'
   merge = 0
   rev = 'release'
+  build = 'yarn install --frozen-lockfile'
 
 # 快速编辑 markdown 的表格
 [[custom_plugins]]

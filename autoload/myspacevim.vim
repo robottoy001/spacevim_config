@@ -102,8 +102,8 @@ func! myspacevim#before() abort
   let g:floaterm_keymap_new    = '<C-n>'
   let g:floaterm_keymap_toggle = '<F5>'
 
-  " table
-  set tablestop=4
+  " tab
+  set tabstop=4
   set sts=4
   set shiftwidth=4
   set expandtab
