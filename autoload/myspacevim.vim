@@ -110,6 +110,7 @@ func! myspacevim#before() abort
   set autoindent
   set listchars=tab:>-,trail:-
   set list
+  set wrap
 endf
 
 func! myspacevim#after() abort
