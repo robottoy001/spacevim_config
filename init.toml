@@ -11,9 +11,8 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    #colorscheme = "gruvbox"
-    colorscheme = "evening"
-    colorscheme_bg = "dark"
+    colorscheme = "molokai"
+    #colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -78,6 +77,9 @@ default_height = 30
 
 [[layers]]
   name = "lang#typescript"
+
+[[layers]]
+  name = "colorscheme"
 
 # ----------------- 添加的插件 -------------------------------------------------
 # coc.nvim 核心配置，不要删除
